@@ -36,3 +36,167 @@
     transform: rotate(360deg);
   }
 }
+
+/* Table styling */
+table {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+}
+
+th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+td {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Button styling */
+button {
+  padding: 8px 15px;
+  margin: 0 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:focus {
+  outline: none;
+}
+
+button.edit {
+  background-color: #007bff;
+  color: white;
+}
+
+button.edit:hover {
+  background-color: #0056b3;
+}
+
+button.delete {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+button.delete:hover {
+  background-color: #e60000;
+}
+
+/* Add styles for Add button */
+/* Add styles for Add button */
+.add-button {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  padding: 10px 15px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: #45a049;
+}
+
+/* Add styles for the form */
+.bill-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin: 0 auto;
+}
+
+.bill-form input {
+  margin-bottom: 10px;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.bill-form button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.bill-form button[type="button"] {
+  background-color: #f44336;
+  margin-left: 10px;
+}
+
+.bill-form button:hover {
+  background-color: #45a049;
+}
+
+.bill-form button[type="button"]:hover {
+  background-color: #e53935;
+}
+
+/* Overlay background */
+.form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Add styles for the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+button {
+  margin-right: 5px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #f1f1f1;
+}

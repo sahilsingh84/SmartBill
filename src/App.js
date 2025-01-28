@@ -4,6 +4,7 @@ const App = () => {
   return (
     <div>
       <div>Hello</div>
+      Maja
     </div>
   );
 };

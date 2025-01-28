@@ -22,6 +22,10 @@ const Showbills = () => {
   // State to control the visibility of the form
   const [formVisible, setFormVisible] = useState(false);
 
+  // Filter states
+  const [filterCategory, setFilterCategory] = useState("");
+  const [filterDate, setFilterDate] = useState("");
+
   // Handle input changes
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -80,8 +84,36 @@ const Showbills = () => {
     dispatch(deleteItem(id));
   };
 
+  // Filtered bills
+  const filteredBills = bills.filter((bill) => {
+    const categoryMatch = filterCategory
+      ? bill.category.toLowerCase().includes(filterCategory.toLowerCase())
+      : true;
+
+    const dateMatch = filterDate ? bill.date === filterDate : true;
+
+    return categoryMatch && dateMatch;
+  });
+
   return (
     <div>
+      <h1 className="page-heading">Bills Management</h1>
+
+      {/* Filter Section */}
+      <div className="filter-section">
+        <input
+          type="text"
+          placeholder="Filter by Category"
+          value={filterCategory}
+          onChange={(e) => setFilterCategory(e.target.value)}
+        />
+        <input
+          type="date"
+          value={filterDate}
+          onChange={(e) => setFilterDate(e.target.value)}
+        />
+      </div>
+
       <table>
         <thead>
           <tr>
@@ -93,7 +125,7 @@ const Showbills = () => {
           </tr>
         </thead>
         <tbody>
-          {bills.map((bill) => (
+          {filteredBills.map((bill) => (
             <tr key={bill.id}>
               <td>{bill.description}</td>
               <td>{bill.category}</td>

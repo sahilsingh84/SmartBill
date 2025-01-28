@@ -9,7 +9,7 @@ const App = () => {
   console.log(bills);
   return (
     <div>
-      <Dashboard />
+      {/* <Dashboard /> */}
       <ShowBills />
     </div>
   );

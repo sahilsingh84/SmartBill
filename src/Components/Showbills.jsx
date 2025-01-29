@@ -96,7 +96,7 @@ const Showbills = () => {
   });
 
   return (
-    <div>
+    <div className="showBillMaindiv">
       <h1 className="page-heading">Bills Management</h1>
 
       {/* Filter Section */}

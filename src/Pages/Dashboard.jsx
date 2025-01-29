@@ -22,7 +22,7 @@ const DashboardPage = () => {
           </p>
           <button
             className="card-button"
-            onClick={() => navigate("/showbills")}
+            onClick={() => navigate("/dashboard/showbills")}
           >
             View Details
           </button>
@@ -41,7 +41,7 @@ const DashboardPage = () => {
           </p>
           <button
             className="card-button"
-            onClick={() => navigate("/monthlybills")}
+            onClick={() => navigate("/dashboard/monthlybills")}
           >
             View Charts
           </button>
@@ -58,7 +58,10 @@ const DashboardPage = () => {
           <p className="card-description">
             Prioritize your payments efficiently to stay within budget.
           </p>
-          <button className="card-button" onClick={() => navigate("/bills")}>
+          <button
+            className="card-button"
+            onClick={() => navigate("/dashboard/bills")}
+          >
             Optimize Now
           </button>
         </div>

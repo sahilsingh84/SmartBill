@@ -5,6 +5,7 @@ import Showbillinchartform from "./Components/Showbillsinchartform";
 import { useSelector } from "react-redux";
 import "./App.css";
 import MonthlyBills from "./Components/Showbillsinchartform";
+import BillsPage from "./Components/BillsPage";
 
 const App = () => {
   const bills = useSelector((state) => state.managebills.bills || []);
@@ -15,6 +16,7 @@ const App = () => {
       <ShowBills />
       {/* <Showbillinchartform bills={bills} /> */}
       <MonthlyBills bills={bills} />
+      <BillsPage bills={bills} />
     </div>
   );
 };
